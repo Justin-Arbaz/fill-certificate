@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate Generator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Old+Standard+TT&family=Roboto+Slab&family=UnifrakturCook:wght@700&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body class="bg-gray-100 py-10">
+    <div class="max-w-4xl mx-auto bg-white p-6 shadow-md rounded mb-10">
+        <h2 class="text-xl font-bold mb-4">Fill Certificate Details</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <input type="text" placeholder="Name" id="name" class="border p-2">
+            <input type="text" placeholder="Father's Name" id="father" class="border p-2">
+            <input type="text" placeholder="DOB" id="dob" class="border p-2">
+            <input type="text" placeholder="Qualification" id="qualification" class="border p-2">
+            <input type="text" placeholder="College Name" id="college" class="border p-2">
+            <input type="text" placeholder="University" id="university" class="border p-2">
+            <input type="text" placeholder="Registration No" id="regno" class="border p-2">
+            <input type="text" placeholder="Serial No" id="serial" class="border p-2">
+            <input type="text" placeholder="Issue Date" id="issue" class="border p-2">
+            <input type="text" placeholder="Valid Upto" id="validity" class="border p-2">
+            <input type="text" placeholder="Place" id="place" class="border p-2">
+            <input type="text" placeholder="Registrar Name" id="registrar" class="border p-2">
+            <input type="file" id="photo" accept="image/*" class="border p-2">
+            <input type="file" id="sign" accept="image/*" class="border p-2">
+        </div>
+        <button onclick="generate()" class="mt-4 px-4 py-2 bg-blue-600 text-white rounded">Generate</button>
+    </div>
+
+    <div class="certificate-container">
+        <div class="certificate-inner-border">
+            <div class="flex justify-between text-sm italic-text">
+                <div>Registration No. <span id="r_regno" class="bold-text"></span></div>
+                <div>S. No. <span id="r_serial"></span></div>
+            </div>
+            <div class="text-center">
+                <img src="logo.png" class=" mx-auto mt-5">
+                <h2 class="certificate-title">Certificate of Registration</h2>
+                <p class="italic-text text-sm">This is to certify that the undersigned</p>
+            </div>
+            <div class="signature-box">
+                <img id="r_sign" class="h-12" />
+                <p class="text-sm">Holder's Signature</p>
+            </div>
+            <div class="photo-container">
+                <img id="r_photo" class="border w-[110px] h-[140px] object-cover" />
+            </div>
+            <div class="certificate-content mt-4 text-sm leading-tight">
+                <p><span class="italic-text">Doctor Shri/Shrimati/Kumari</span><span id="r_name"
+                        class="bold-underline ml-2"></span></p>
+                <p><span class="italic-text">Son/Daughter of Sh.</span><span id="r_father"
+                        class="bold-underline ml-2"></span></p>
+                <p><span class="italic-text">born on</span><span id="r_dob" class="bold-underline ml-2"></span></p>
+                <p><span class="italic-text">passing the qualification of</span><span id="r_qualification"
+                        class="bold-underline ml-2"></span></p>
+                <p><span class="italic-text">from</span><span id="r_college" class="bold-underline ml-2"></span><span
+                        class="italic-text ml-2">College affiliated to</span></p>
+                <p><span id="r_university" class="bold-underline"></span><span class="italic-text ml-2">Board/Examining
+                        body/</span></p>
+                <p class="italic-text">University has been duly registered under the Delhi Bharatiya Chikitsa Parishad
+                    Act, 1998 in part <span class="underline-dotted bold-text">A</span> of the Register.</p>
+                <p class="italic-text">In witness where of are herewith affixed the seal of the Delhi Bharatiya Chikitsa
+                    Parishad, Delhi and the signature of the Registrar subject to the provisions of the said Act.</p>
+                <p class="italic-text"><span class="underline-dotted bold-text" id="r_issue"></span> This certificate is
+                    valid upto a period of 5 years, i.e. <span class="underline-dotted" id="r_validity"></span></p>
+            </div>
+            <div class="footer-flex">
+                <div class="footer-left">
+                    <p>Date: <span class="underline-dotted" id="r_issue_footer"></span><br>Place: <span
+                            class="underline-dotted" id="r_place_footer"></span></p>
+                </div>
+                <div class="footer-center">
+                    <p class="bold-text">SEAL</p>
+                </div>
+                <div class="footer-right text-center">
+                    <p class="bold-text" id="r_registrar"></p>
+                    <p>Registrar</p>
+                </div>
+            </div>
+            <p class="footer-bottom">The information regarding change of address is essential, otherwise action shall be
+                taken under provisions of the Rules/Act.</p>
+        </div>
+    </div>
+
+    <script>
+        function generate() {
+            const id = (id) => document.getElementById(id);
+            id('r_name').textContent = id('name').value;
+            id('r_father').textContent = id('father').value;
+            id('r_dob').textContent = id('dob').value;
+            id('r_qualification').textContent = id('qualification').value;
+            id('r_college').textContent = id('college').value;
+            id('r_university').textContent = id('university').value;
+            id('r_regno').textContent = id('regno').value;
+            id('r_serial').textContent = id('serial').value;
+            id('r_issue').textContent = id('issue').value;
+            id('r_validity').textContent = id('validity').value;
+            id('r_place_footer').textContent = id('place').value;
+            id('r_issue_footer').textContent = id('issue').value;
+            id('r_registrar').textContent = id('registrar').value;
+
+            const photo = id('photo').files[0];
+            const sign = id('sign').files[0];
+            if (photo) {
+                const reader = new FileReader();
+                reader.onload = () => id('r_photo').src = reader.result;
+                reader.readAsDataURL(photo);
+            }
+            if (sign) {
+                const reader = new FileReader();
+                reader.onload = () => id('r_sign').src = reader.result;
+                reader.readAsDataURL(sign);
+            }
+        }
+    </script>
+</body>
+
+</html>

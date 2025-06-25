@@ -1,0 +1,423 @@
+body {
+            font-family: 'Old Standard TT', serif;
+            background-color: #f9fafb;
+        }
+
+        .certificate-container {
+            max-width: 900px;
+            margin: 2rem auto;
+            background-color: white;
+            border: 8px solid #2d2d2d;
+            padding: 1rem 2rem 2rem 2rem;
+            position: relative;
+        }
+
+        /* .certificate-inner-border {
+            border: 4px solid #a3a3a3;
+            padding: 1rem 2rem 2rem 2rem;
+        } */
+
+        .title-arc {
+            font-family: 'Roboto Slab', serif;
+            font-weight: 900;
+            font-size: 2.75rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            line-height: 1;
+            transform-origin: center bottom;
+            margin-bottom: 0.5rem;
+        }
+
+        .arc-container {
+            width: 100%;
+            height: 120px;
+            position: relative;
+            overflow: visible;
+            margin-bottom: 0.5rem;
+        }
+
+        .arc-text {
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            text-align: center;
+            font-weight: 900;
+            font-size: 2.75rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            font-family: 'Roboto Slab', serif;
+            transform: translateY(20px);
+        }
+
+        .arc-text span {
+            display: inline-block;
+            transform-origin: bottom center;
+        }
+
+        .certificate-title {
+            font-family: 'Old Standard TT', serif;
+            font-weight: 700;
+            font-size: 2.25rem;
+            text-align: center;
+            margin-bottom: 0.75rem;
+            letter-spacing: 0.02em;
+        }
+
+        .italic-text {
+            font-style: italic;
+        }
+
+        .signature-box {
+            border: 1px solid black;
+            width: 180px;
+            height: 70px;
+            margin-top: 0.25rem;
+            margin-bottom: 0.25rem;
+            padding: 0.25rem 0.5rem;
+            font-family: 'Roboto Slab', serif;
+            font-style: italic;
+            font-weight: 600;
+            font-size: 0.875rem;
+            line-height: 1.1;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .signature-text {
+            font-style: italic;
+            font-weight: 600;
+            font-size: 0.875rem;
+            margin-top: -0.25rem;
+        }
+
+        .bold-underline {
+            font-weight: 700;
+            text-decoration: underline;
+            letter-spacing: 0.02em;
+        }
+
+        .bold-text {
+            font-weight: 700;
+        }
+
+        .small-text {
+            font-size: 0.875rem;
+        }
+
+        .small-italic {
+            font-size: 0.875rem;
+            font-style: italic;
+        }
+
+        .small-bold-italic {
+            font-size: 0.875rem;
+            font-style: italic;
+            font-weight: 700;
+        }
+
+        .small-bold {
+            font-size: 0.875rem;
+            font-weight: 700;
+        }
+
+        .underline-dotted {
+            border-bottom: 1px dotted black;
+            display: inline-block;
+            min-width: 80px;
+            padding-bottom: 1px;
+            margin-left: 0.25rem;
+            margin-right: 0.25rem;
+        }
+
+        .photo-container {
+            border: 1px solid black;
+            width: 110px;
+            height: 140px;
+            position: absolute;
+            top: 380px;
+            right: 60px;
+            background-color: white;
+        }
+
+        .photo-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .seal-stamp {
+            position: absolute;
+            top: 230px;
+            right: 40px;
+            width: 110px;
+            height: 140px;
+            border-radius: 50%;
+            border: 1px solid transparent;
+            background: transparent;
+            pointer-events: none;
+            user-select: none;
+            mix-blend-mode: multiply;
+            opacity: 0.3;
+        }
+
+        .footer-text {
+            font-size: 0.75rem;
+            font-family: 'Roboto Slab', serif;
+            text-align: center;
+            margin-top: 1rem;
+            letter-spacing: 0.02em;
+        }
+
+        .footer-bottom {
+            font-size: 0.75rem;
+            font-family: 'Roboto Slab', serif;
+            text-align: center;
+            margin-top: 0.5rem;
+            letter-spacing: 0.02em;
+        }
+
+        .footer-bottom span {
+            font-weight: 700;
+        }
+
+        .footer-flex {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1rem;
+            font-size: 0.875rem;
+            font-family: 'Roboto Slab', serif;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+        }
+
+        .footer-left,
+        .footer-right {
+            width: 33%;
+        }
+
+        .footer-center {
+            width: 33%;
+            text-align: center;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+        }
+
+        .footer-right {
+            text-align: right;
+            font-weight: 700;
+            font-family: 'Roboto Slab', serif;
+            font-style: italic;
+            font-size: 1.25rem;
+            line-height: 1;
+            letter-spacing: 0.02em;
+        }
+
+        .footer-right span {
+            display: block;
+            font-size: 1.25rem;
+            font-weight: 700;
+            font-family: 'Roboto Slab', serif;
+            font-style: normal;
+            letter-spacing: 0.02em;
+        }
+
+        .footer-right .signature {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            font-weight: 400;
+            font-size: 1.5rem;
+            margin-top: -0.5rem;
+            letter-spacing: 0.02em;
+        }
+
+        .top-left,
+        .top-right {
+            font-size: 0.875rem;
+            font-family: 'Roboto Slab', serif;
+            font-style: italic;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+        }
+
+        .top-left {
+            position: absolute;
+            top: 12px;
+            left: 20px;
+        }
+
+        .top-right {
+            position: absolute;
+            top: 12px;
+            right: 20px;
+        }
+
+        .top-right .number {
+            font-weight: 700;
+            font-style: normal;
+            border-bottom: 1px dotted black;
+            padding-left: 0.25rem;
+            padding-right: 0.25rem;
+            letter-spacing: 0.02em;
+        }
+
+        .seal-banner {
+            font-family: 'Roboto Slab', serif;
+            font-weight: 700;
+            font-size: 0.75rem;
+            background-color: black;
+            color: white;
+            padding: 0 0.5rem;
+            position: absolute;
+            /* top: 110px; */
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 0 0 4px 4px;
+            letter-spacing: 0.02em;
+            user-select: none;
+            margin-top: 1px;
+        }
+
+        .seal-logo {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 0.25rem auto;
+            display: block;
+        }
+
+        .seal-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .seal-text {
+            font-family: 'Roboto Slab', serif;
+            font-weight: 700;
+            font-size: 0.75rem;
+            text-align: center;
+            letter-spacing: 0.02em;
+            margin-bottom: 0.5rem;
+        }
+
+        .certificate-content p {
+            margin-bottom: 0.25rem;
+            line-height: 1.3;
+        }
+
+        .certificate-content .indent {
+            margin-left: 1.5rem;
+        }
+
+        .certificate-content .inline-bold {
+            font-weight: 700;
+        }
+
+        .certificate-content .inline-italic {
+            font-style: italic;
+        }
+
+        .certificate-content .inline-underline-dotted {
+            border-bottom: 1px dotted black;
+            display: inline-block;
+            min-width: 120px;
+            padding-bottom: 1px;
+            margin-left: 0.25rem;
+            margin-right: 0.25rem;
+        }
+
+        @media (max-width: 640px) {
+            .certificate-container {
+                padding: 1rem 1rem 1.5rem 1rem;
+            }
+
+            .photo-container {
+                position: static;
+                width: 100px;
+                height: 130px;
+                margin: 1rem auto 1rem auto;
+            }
+
+            .seal-stamp {
+                display: none;
+            }
+
+            .footer-flex {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .footer-left,
+            .footer-center,
+            .footer-right {
+                width: 100%;
+                text-align: center;
+            }
+
+            .footer-right {
+                font-size: 1.25rem;
+            }
+        }
+
+        /* .G1 {
+            transform: translate(20px, 85px) rotate(-30deg);
+        }
+
+        .e1 {
+            transform: translate(13px, 60px) rotate(-25deg);
+        }
+
+        .e2 {
+            transform: translate(6px, 40px) rotate(-20deg);
+        }
+
+        .k1 {
+            transform: translate(3px, 23px) rotate(-15deg);
+        }
+
+        .s1 {
+            transform: translate(2px, 14px) rotate(-10deg);
+        }
+
+        .f {
+            transform: translate(1px, 8px) rotate(-5deg);
+        }
+
+        .o {
+            transform: translate(0px, 5px) rotate(0deg);
+        }
+
+        .r {
+            transform: translate(-1px, 8px) rotate(5deg);
+        }
+
+        .G2 {
+            transform: translate(-2px, 14px) rotate(10deg);
+        }
+
+        .e3 {
+            transform: translate(-3px, 25px) rotate(15deg);
+        }
+
+        .e4 {
+            transform: translate(-6px, 40px) rotate(20deg);
+        }
+
+        .k2 {
+            transform: translate(-14px, 60px) rotate(25deg);
+        }
+
+        .s2 {
+            transform: translate(-20px, 80px) rotate(30deg);
+        }
+
+        span {
+            display: inline-block;
+        } */
+
+        .certificate-title {
+            font-family: 'Old English Text MT', 'Old London', serif;
+font-size: 38px; /* Approximate */
+font-weight: normal;
+  }
